@@ -14,8 +14,8 @@
         <h1>Welcome ❤️</h1>
         <p>Hi, I'm Bhavya! Choose where you want to go:</p>
         <div class="menu-buttons">
-            <button onclick="showSection('about')"> About</button>
-            <button onclick="showSection('projects')"> Projects</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('projects')">Projects</button>
             <button onclick="showSection('skills')"> Skills</button>
             <button onclick="showSection('contact')">Contact</button>
         </div>
@@ -36,7 +36,6 @@
 <section id="projects" class="section">
     <h2>Projects</h2>
     
-    <!-- Explanation -->
     <div class="project-intro">
         <p>My projects are focused on improving my frontend development skills. 
         Each project helps me practice clean coding, responsive design, 
@@ -44,65 +43,60 @@
         are practical, creative, and useful for real-world problems.</p>
     </div>
 
-    <!-- Current Projects -->
-    <h3 style="text-align:center; margin-top:2rem;">Current Projects</h3>
-    
-    <div class="project-card">
-        <h3>Realtime Chat App</h3>
-        <p>A realtime chat application built with HTML, CSS, JavaScript, and Firebase.</p>
-        <a href="https://bhavyamalla3.github.io/realtime-chat/" target="_blank">View Project</a>
-    </div>
+    <!-- Current Projects Grid -->
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Realtime Chat App</h3>
+            <p>A realtime chat application built with HTML, CSS, JavaScript, and Firebase.</p>
+            <a href="https://bhavyamalla3.github.io/realtime-chat/" target="_blank">View Project</a>
+        </div>
 
-    <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio website to showcase my projects and skills.</p>
-        <a href="#" target="_blank">View Project</a>
-    </div>
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio website to showcase my projects and skills.</p>
+            <a href="#" target="_blank">View Project</a>
+        </div>
 
-    <div class="project-card">
-        <h3>To-Do App</h3>
-        <p>An interactive To-Do list app to manage daily tasks.</p>
-        <a href="#" target="_blank">View Project</a>
-    </div>
+        <div class="project-card">
+            <h3>To-Do App</h3>
+            <p>An interactive To-Do list app to manage daily tasks.</p>
+            <a href="#" target="_blank">View Project</a>
+        </div>
 
-    <div class="project-card">
-        <h3>Interactive Quiz</h3>
-        <p>A fun and interactive quiz application. 
-        Below you can view the quiz questions directly.</p>
-        
-        <!-- Embedded PDF -->
-        <embed src="https://www.manaresults.co.in/jntuh/OQP/125DR112017.pdf" 
-               type="application/pdf" width="100%" height="500px" />
-        
-        <a href="https://www.manaresults.co.in/jntuh/OQP/125DR112017.pdf" target="_blank">Open in Fullscreen</a>
-    </div>
+        <div class="project-card">
+            <h3>Interactive Quiz</h3>
+            <p>A fun and interactive quiz application built with HTML, CSS, and JavaScript.</p>
+            <iframe src="https://bhavyamalla3.github.io/interactive-quiz-application/" 
+                    width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
+            <a href="https://bhavyamalla3.github.io/interactive-quiz-application/" target="_blank">Open in Fullscreen</a>
+        </div>
 
-    <div class="project-card">
-        <h3>Registration Form</h3>
-        <p>A responsive registration form with validation to collect user details.</p>
-        
-        <!-- Embedded Live Form -->
-        <iframe src="https://mallabhavya21.github.io/techforgirls/" 
-                width="100%" height="500px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
-        
-        <a href="https://mallabhavya21.github.io/techforgirls/" target="_blank">Open in Fullscreen</a>
+        <div class="project-card">
+            <h3>Registration Form</h3>
+            <p>A responsive registration form with validation to collect user details.</p>
+            <iframe src="https://mallabhavya21.github.io/techforgirls/" 
+                    width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
+            <a href="https://mallabhavya21.github.io/techforgirls/" target="_blank">Open in Fullscreen</a>
+        </div>
     </div>
 
     <!-- Future Projects -->
     <h3 style="text-align:center; margin-top:2rem;">Future Project Ideas</h3>
-    <div class="project-card">
-        <h3>E-commerce Website</h3>
-        <p>A complete online shopping site with product listings, cart, and checkout.</p>
-    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>E-commerce Website</h3>
+            <p>A complete online shopping site with product listings, cart, and checkout.</p>
+        </div>
 
-    <div class="project-card">
-        <h3>Blogging Platform</h3>
-        <p>A blog site where users can write, edit, and publish their articles.</p>
-    </div>
+        <div class="project-card">
+            <h3>Blogging Platform</h3>
+            <p>A blog site where users can write, edit, and publish their articles.</p>
+        </div>
 
-    <div class="project-card">
-        <h3>Weather App with React</h3>
-        <p>A weather forecast app using React and live API integration.</p>
+        <div class="project-card">
+            <h3>Weather App with React</h3>
+            <p>A weather forecast app using React and live API integration.</p>
+        </div>
     </div>
 
     <button onclick="backToWelcome()">Back</button>
@@ -114,27 +108,27 @@
     <div class="skills-container">
         <div class="skill">
             <p>HTML</p>
-            <div class="progress"><div class="progress-bar" style="width:95%;">95%</div></div>
+            <div class="progress"><div class="progress-bar html" data-width="95%">95%</div></div>
         </div>
         <div class="skill">
             <p>CSS</p>
-            <div class="progress"><div class="progress-bar" style="width:90%;">90%</div></div>
+            <div class="progress"><div class="progress-bar css" data-width="90%">90%</div></div>
         </div>
         <div class="skill">
             <p>JavaScript</p>
-            <div class="progress"><div class="progress-bar" style="width:80%;">80%</div></div>
+            <div class="progress"><div class="progress-bar js" data-width="80%">80%</div></div>
         </div>
         <div class="skill">
             <p>Database</p>
-            <div class="progress"><div class="progress-bar" style="width:70%;">70%</div></div>
+            <div class="progress"><div class="progress-bar db" data-width="70%">70%</div></div>
         </div>
         <div class="skill">
             <p>Node.js</p>
-            <div class="progress"><div class="progress-bar" style="width:65%;">65%</div></div>
+            <div class="progress"><div class="progress-bar node" data-width="65%">65%</div></div>
         </div>
         <div class="skill">
             <p>React</p>
-            <div class="progress"><div class="progress-bar" style="width:75%;">75%</div></div>
+            <div class="progress"><div class="progress-bar react" data-width="75%">75%</div></div>
         </div>
     </div>
     <button onclick="backToWelcome()">Back</button>
