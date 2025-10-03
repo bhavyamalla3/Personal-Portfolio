@@ -10,19 +10,20 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer){
 }, options);
 faders.forEach(fader => appearOnScroll.observe(fader));
 
-// Skill circle animation with counting numbers
+// Skill circle animation with counting numbers and glowing effect
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.skill-circle').forEach(circle=>{
         let percent = circle.getAttribute('data-percent');
         let color = circle.style.getPropertyValue('--color') || '#e67e22';
         let current = 0;
 
-        // Add a span for percentage
+        // Add span for percentage
         const percentSpan = document.createElement('span');
         percentSpan.classList.add('percent');
         percentSpan.innerText = '0%';
         circle.appendChild(percentSpan);
 
+        // Animate circle fill and counting number
         let interval = setInterval(()=>{
             if(current >= percent) {
                 clearInterval(interval);
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 percentSpan.innerText = current + '%';
                 let angle = (current/100)*360;
                 circle.style.background = `conic-gradient(${color} 0deg ${angle}deg, #ddd ${angle}deg 360deg)`;
+                circle.style.filter = `drop-shadow(0 0 ${5 + current/20}px ${color})`; // glowing effect
             }
         },10);
     });
