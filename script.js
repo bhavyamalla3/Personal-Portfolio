@@ -10,7 +10,7 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer){
 }, options);
 faders.forEach(fader => appearOnScroll.observe(fader));
 
-// Skill circle animation on page load
+// Skill circle animation on page load with colors
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.skill-circle').forEach(circle=>{
         let percent = circle.getAttribute('data-percent');
