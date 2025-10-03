@@ -3,77 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhavya's Portfolio</title>
+<title>Mallababla Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Welcome Screen -->
-<section id="welcome" class="welcome-screen">
-    <div class="welcome-content">
-        <h1>Welcome ❤️</h1>
-        <p>Hi, I'm Bhavya! Choose where you want to go:</p>
-        <div class="menu-buttons">
-            <button onclick="showSection('about')">About</button>
-            <button onclick="showSection('projects')">Projects</button>
-            <button onclick="showSection('skills')">Skills</button>
-            <button onclick="showSection('contact')">Contact</button>
-        </div>
-    </div>
-</section>
+<!-- Header -->
+<header>
+    <h1>Mallababla</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
 <!-- About Section -->
-<section id="about" class="section">
+<section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Bhavya, a B.Tech 3rd-year student passionate about frontend development. 
-    I love building interactive and responsive web applications that provide a great user experience. 
-    My goal is to become a professional frontend developer. 
-    This portfolio showcases some of the projects I've built so far.</p>
-    <button onclick="backToWelcome()">Back</button>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    
-    <div class="project-intro">
-        <p>My projects are focused on improving my frontend development skills. 
-        Each project helps me practice clean coding, responsive design, 
-        and user-friendly functionality. I aim to create projects that 
-        are practical, creative, and useful for real-world problems.</p>
-    </div>
-
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>Realtime Chat App</h3>
-            <iframe src="https://bhavyamalla3.github.io/realtime-chat/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
-            <a href="https://bhavyamalla3.github.io/realtime-chat/" target="_blank">Open in Fullscreen</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Personal Portfolio</h3>
-            <iframe src="https://bhavyamalla3.github.io/Personal-Portfolio/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
-            <a href="https://bhavyamalla3.github.io/Personal-Portfolio/" target="_blank">Open in Fullscreen</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Interactive Quiz</h3>
-            <iframe src="https://bhavyamalla3.github.io/interactive-quiz-application/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
-            <a href="https://bhavyamalla3.github.io/interactive-quiz-application/" target="_blank">Open in Fullscreen</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Registration Form</h3>
-            <iframe src="https://mallabhavya21.github.io/techforgirls/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
-            <a href="https://mallabhavya21.github.io/techforgirls/" target="_blank">Open in Fullscreen</a>
-        </div>
-    </div>
-
-    <button onclick="backToWelcome()">Back</button>
+    <p>Hello! I'm Bhavya, a B.Tech 3rd-year student passionate about frontend development and Python. 
+    I love building interactive and responsive web applications. 
+    My goal is to become a professional frontend developer. This portfolio showcases my projects and skills.</p>
 </section>
 
 <!-- Skills Section -->
-<section id="skills" class="section">
+<section id="skills">
     <h2>Skills</h2>
     <div class="skills-container">
         <div class="skill-circle" data-skill="HTML" data-percent="95" style="--color:#e44d26;"></div>
@@ -83,21 +42,44 @@
         <div class="skill-circle" data-skill="Node.js" data-percent="65" style="--color:#68a063;"></div>
         <div class="skill-circle" data-skill="React" data-percent="75" style="--color:#61dafb;"></div>
     </div>
-    <button onclick="backToWelcome()">Back</button>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Realtime Chat App</h3>
+            <iframe src="https://bhavyamalla3.github.io/realtime-chat/" width="100%" height="250px"></iframe>
+            <a href="https://bhavyamalla3.github.io/realtime-chat/" target="_blank">Open</a>
+        </div>
+        <div class="project-card">
+            <h3>Personal Portfolio</h3>
+            <iframe src="https://bhavyamalla3.github.io/Personal-Portfolio/" width="100%" height="250px"></iframe>
+            <a href="https://bhavyamalla3.github.io/Personal-Portfolio/" target="_blank">Open</a>
+        </div>
+        <div class="project-card">
+            <h3>Interactive Quiz</h3>
+            <iframe src="https://bhavyamalla3.github.io/interactive-quiz-application/" width="100%" height="250px"></iframe>
+            <a href="https://bhavyamalla3.github.io/interactive-quiz-application/" target="_blank">Open</a>
+        </div>
+        <div class="project-card">
+            <h3>Registration Form</h3>
+            <iframe src="https://mallabhavya21.github.io/techforgirls/" width="100%" height="250px"></iframe>
+            <a href="https://mallabhavya21.github.io/techforgirls/" target="_blank">Open</a>
+        </div>
+    </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="section">
+<section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: bhavya@example.com</p>
-    <p>Phone: +123 456 7890</p>
     <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
     </form>
-    <button onclick="backToWelcome()">Back</button>
 </section>
 
 <script src="script.js"></script>
