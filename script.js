@@ -1,11 +1,11 @@
 // Fade-in sections on scroll
 const faders = document.querySelectorAll('.fade-section');
 const options = {threshold:0.1};
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
     entries.forEach(entry=>{
         if(!entry.isIntersecting) return;
         entry.target.classList.add('show');
-        appearOnScroll.unobserve(entry.target);
+        observer.unobserve(entry.target);
     });
 }, options);
 faders.forEach(fader => appearOnScroll.observe(fader));
@@ -17,7 +17,7 @@ document.querySelectorAll('.skill-circle').forEach(circle=>{
         let color = circle.style.getPropertyValue('--color') || '#e67e22';
         let current = 0;
         let interval = setInterval(()=>{
-            if(current>=percent) clearInterval(interval);
+            if(current >= percent) clearInterval(interval);
             else{
                 current++;
                 let angle = (current/100)*360;
