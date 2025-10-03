@@ -6,22 +6,29 @@ body, html {
     background:#f4f4f4;
 }
 
-/* Landing Section Full Screen */
+/* Landing Section */
 .landing {
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    background: linear-gradient(135deg,#f39c12,#e67e22);
+    background: linear-gradient(-45deg,#f39c12,#e67e22,#f1c40f,#e74c3c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     color:#fff;
 }
-.landing-content h1 {
+@keyframes gradient {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+.landing h1 {
     font-size:3rem;
     margin-bottom:1rem;
 }
 
-/* Navigation Side by Side */
+/* Landing Navigation */
 .landing nav ul {
     display:flex;
     justify-content:center;
@@ -38,13 +45,13 @@ body, html {
     text-decoration:none;
     font-weight:bold;
     padding:0.5rem 1rem;
-    background:#222;
-    border-radius:5px;
+    background: rgba(0,0,0,0.5);
+    border-radius:8px;
     transition:0.3s;
 }
 .landing nav ul li a:hover {
-    background:#f1c40f;
-    color:#222;
+    background:#fff;
+    color:#e67e22;
     transform: scale(1.1);
 }
 
@@ -54,8 +61,19 @@ section {
     background:#fff;
     margin:1rem auto;
     max-width:1000px;
-    border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Fade-in animation for scroll */
+.fade-section {
+    opacity:0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+.fade-section.show {
+    opacity:1;
+    transform: translateY(0);
 }
 
 /* Projects Grid */
@@ -67,20 +85,20 @@ section {
 .project-card {
     background:#f4f4f4;
     padding:1rem;
-    border-radius:8px;
-    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow:0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 .project-card iframe {
     border:1px solid #ddd;
     border-radius:8px;
 }
 
-/* Skills Section */
+/* Skills */
 .skills-container {
     display:flex;
     flex-wrap:wrap;
@@ -89,8 +107,8 @@ section {
 }
 .skill-circle {
     position: relative;
-    width:130px;
-    height:130px;
+    width:140px;
+    height:140px;
     border-radius:50%;
     background:#ddd;
     display:flex;
@@ -121,22 +139,26 @@ form {
 }
 form input, form textarea {
     margin-bottom:1rem;
-    padding:0.8rem;
+    padding:1rem;
     border:1px solid #ccc;
-    border-radius:5px;
+    border-radius:8px;
+    transition:0.3s;
 }
 form input:focus, form textarea:focus {
-    border-color:#f39c12;
+    border-color:#e67e22;
     outline:none;
+    box-shadow:0 0 10px rgba(230,126,34,0.5);
 }
 form button[type="submit"] {
-    background:#f39c12;
+    background:#e67e22;
     color:#fff;
     border:none;
-    border-radius:5px;
-    padding:0.8rem;
+    border-radius:8px;
+    padding:1rem;
     font-weight:bold;
+    transition:0.3s;
 }
 form button[type="submit"]:hover {
-    background:#e67e22;
+    background:#f39c12;
+    transform: scale(1.05);
 }
