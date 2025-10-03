@@ -3,6 +3,34 @@ body, html {margin:0; padding:0; font-family:Arial,sans-serif; background:#f4f4f
 button {cursor:pointer; transition:0.3s;}
 button:hover {opacity:0.85;}
 
+/* Top Navigation Bar */
+#top-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #222;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+#top-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+#top-nav li {margin:0 1rem;}
+#top-nav button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#top-nav button:hover {background: #f39c12; border-radius: 5px;}
+
 /* Welcome Screen */
 .welcome-screen {
     height:100vh;
@@ -38,26 +66,32 @@ button:hover {opacity:0.85;}
 .project-card a:hover {background:#f39c12;}
 .project-card iframe, .project-card embed {border:1px solid #ddd; border-radius:8px; margin-top:1rem;}
 
-/* Skills Section */
-.skills-container {max-width:600px; margin:0 auto;}
-.skill {margin-bottom:1rem;}
-.skill p {margin:0 0 0.3rem 0; font-weight:bold;}
-.progress {width:100%; background:#ddd; border-radius:20px; overflow:hidden;}
-.progress-bar {
-    color:#fff;
-    padding:0.3rem;
-    text-align:right;
-    border-radius:20px;
-    font-size:0.9rem;
-    width:0; /* start at 0 for animation */
-    transition: width 1.5s ease-in-out;
+/* Circular Skills */
+.skills-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:2rem;
+    margin-top:2rem;
 }
-.progress-bar.html {background:#e44d26;}
-.progress-bar.css {background:#264de4;}
-.progress-bar.js {background:#f7df1e; color:#000;}
-.progress-bar.db {background:#27ae60;}
-.progress-bar.node {background:#68a063;}
-.progress-bar.react {background:#61dafb; color:#000;}
+.skill-circle {
+    position: relative;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background: conic-gradient(#ddd 0deg 360deg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    font-size:1rem;
+    transition: background 1.5s;
+}
+.skill-circle::before {
+    content: attr(data-skill) "\A" attr(data-percent) "%";
+    white-space: pre;
+    text-align:center;
+}
 
 /* Contact Form */
 form {max-width:500px; margin:0 auto; display:flex; flex-direction:column;}
