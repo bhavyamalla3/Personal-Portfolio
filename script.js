@@ -4,14 +4,13 @@ function showSection(sectionId){
     sections.forEach(sec => sec.style.display = 'none');
     document.getElementById(sectionId).style.display = 'block';
 
-    // Animate skill bars
+    // Animate circular skill graphs
     if(sectionId === 'skills'){
-        let bars = document.querySelectorAll('.progress-bar');
-        bars.forEach(bar => {
-            bar.style.width = "0";
-            setTimeout(() => {
-                bar.style.width = bar.getAttribute("data-width");
-            }, 100);
+        const circles = document.querySelectorAll('.skill-circle');
+        circles.forEach(circle => {
+            let percent = circle.getAttribute('data-percent');
+            let angle = (percent/100)*360;
+            circle.style.background = `conic-gradient(#f39c12 0deg ${angle}deg, #ddd ${angle}deg 360deg)`;
         });
     }
 }
