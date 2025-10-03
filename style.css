@@ -24,14 +24,14 @@ body, html {
     100%{background-position:0% 50%;}
 }
 
-/* Landing Name with Small Orange Block */
+/* Landing Name with Orange Block */
 .landing h1 {
     font-size:4rem;
     margin-bottom:0.5rem;
     display: inline-block;
-    padding: 0.2rem 0.6rem;  
-    background: #e67e22;      
-    color: #fff;              
+    padding: 0.2rem 0.6rem;
+    background: #e67e22;
+    color: #fff;
     border-radius: 5px;
     font-weight:700;
 }
@@ -39,7 +39,7 @@ body, html {
 .titles {
     font-size:1.5rem;
     margin-bottom:2rem;
-    color:#fff;          
+    color:#fff;
     font-weight:500;
 }
 
@@ -111,14 +111,21 @@ section {
     color:#000;
 }
 
-.skill-circle::before {
-    content: attr(data-skill) "\A" attr(data-percent) "%";
-    white-space: pre;
+.skill-circle .percent {
+    position:absolute;
     text-align:center;
     font-weight:bold;
-    position: absolute;
-    z-index:2;
     font-size:1rem;
+    z-index:2;
+}
+
+.skill-circle::before {
+    content: attr(data-skill);
+    position: absolute;
+    bottom:-25px;
+    width:100%;
+    text-align:center;
+    font-weight:bold;
 }
 
 .skill-circle::after {
@@ -128,6 +135,7 @@ section {
     border-radius:50%;
     background: conic-gradient(var(--color) 0deg 0deg, #ddd 0deg 360deg);
     z-index:1;
+    transition: all 0.3s;
 }
 
 /* Projects */
