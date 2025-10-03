@@ -27,10 +27,24 @@ button:hover {opacity:0.85;}
 .section button:hover {background:#e67e22;}
 
 /* Projects */
+.project-intro {
+    background:#fff;
+    padding:1rem;
+    margin-bottom:1.5rem;
+    border-radius:8px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    font-size:1.1rem;
+    line-height:1.6;
+}
 .project-card {background:#fff; padding:1rem; margin:1rem 0; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
 .project-card h3 {margin-bottom:0.5rem;}
 .project-card a {display:inline-block; margin-top:0.5rem; padding:0.5rem 1rem; background:#222; color:#fff; text-decoration:none; border-radius:5px;}
 .project-card a:hover {background:#f39c12;}
+.project-card embed, .project-card iframe {
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-top:1rem;
+}
 
 /* Contact Form */
 form {max-width:500px; margin:0 auto; display:flex; flex-direction:column;}
