@@ -4,13 +4,14 @@ function showSection(sectionId){
     sections.forEach(sec => sec.style.display = 'none');
     document.getElementById(sectionId).style.display = 'block';
 
-    // Animate skills when opening skills section
+    // Animate skill bars
     if(sectionId === 'skills'){
         let bars = document.querySelectorAll('.progress-bar');
         bars.forEach(bar => {
-            let finalWidth = bar.getAttribute("style").match(/width:\s*([0-9]+%)/)[1];
-            bar.style.width = "0"; // reset
-            setTimeout(() => { bar.style.width = finalWidth; }, 100);
+            bar.style.width = "0";
+            setTimeout(() => {
+                bar.style.width = bar.getAttribute("data-width");
+            }, 100);
         });
     }
 }
