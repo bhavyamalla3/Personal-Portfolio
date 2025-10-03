@@ -10,9 +10,9 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer){
 }, options);
 faders.forEach(fader => appearOnScroll.observe(fader));
 
-// Skill circle animation on hover
-document.querySelectorAll('.skill-circle').forEach(circle=>{
-    circle.addEventListener('mouseenter', ()=>{
+// Skill circle animation on page load
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.skill-circle').forEach(circle=>{
         let percent = circle.getAttribute('data-percent');
         let color = circle.style.getPropertyValue('--color') || '#e67e22';
         let current = 0;
@@ -24,8 +24,5 @@ document.querySelectorAll('.skill-circle').forEach(circle=>{
                 circle.style.background = `conic-gradient(${color} 0deg ${angle}deg,#ddd ${angle}deg 360deg)`;
             }
         },10);
-    });
-    circle.addEventListener('mouseleave', ()=>{
-        circle.style.background = '#ddd';
     });
 });
