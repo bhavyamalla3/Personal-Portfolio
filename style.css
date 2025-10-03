@@ -6,20 +6,23 @@ body, html {
     background:#f4f4f4;
 }
 
-/* Centered Header */
-.center-header {
+/* Landing Section Full Screen */
+.landing {
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:3rem 2rem;
-    background:#f39c12;
+    background: linear-gradient(135deg,#f39c12,#e67e22);
     color:#fff;
 }
-.center-header h1 {
+.landing-content h1 {
     font-size:3rem;
     margin-bottom:1rem;
 }
 
-/* Centered Navigation */
-nav ul {
+/* Navigation Side by Side */
+.landing nav ul {
     display:flex;
     justify-content:center;
     list-style:none;
@@ -27,10 +30,10 @@ nav ul {
     margin:0;
     flex-wrap:wrap;
 }
-nav ul li {
+.landing nav ul li {
     margin:0 1rem;
 }
-nav ul li a {
+.landing nav ul li a {
     color:#fff;
     text-decoration:none;
     font-weight:bold;
@@ -39,7 +42,7 @@ nav ul li a {
     border-radius:5px;
     transition:0.3s;
 }
-nav ul li a:hover {
+.landing nav ul li a:hover {
     background:#f1c40f;
     color:#222;
     transform: scale(1.1);
@@ -77,7 +80,7 @@ section {
     border-radius:8px;
 }
 
-/* Circular Skills with hover animation */
+/* Skills Section */
 .skills-container {
     display:flex;
     flex-wrap:wrap;
@@ -102,8 +105,6 @@ section {
     transform: scale(1.1);
     cursor:pointer;
 }
-
-/* Skill circle label */
 .skill-circle::before {
     content: attr(data-skill) "\A" attr(data-percent) "%";
     white-space: pre;
