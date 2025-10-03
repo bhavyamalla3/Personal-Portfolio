@@ -6,7 +6,7 @@ body, html {
     background:#f4f4f4;
 }
 
-/* Landing Section */
+/* Landing Section Full Screen */
 .landing {
     height:100vh;
     display:flex;
@@ -33,7 +33,7 @@ body, html {
     color:#fff;
 }
 
-/* Navigation Buttons */
+/* Centered Navigation Buttons */
 .landing nav ul {
     display:flex;
     justify-content:center;
@@ -59,7 +59,7 @@ body, html {
     transform: scale(1.1);
 }
 
-/* Sections */
+/* Sections Styling */
 section {
     padding:3rem 2rem;
     background:#fff;
@@ -69,7 +69,7 @@ section {
     box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Fade-in Sections on Scroll */
+/* Fade-in Sections */
 .fade-section {
     opacity:0;
     transform: translateY(50px);
@@ -78,28 +78,6 @@ section {
 .fade-section.show {
     opacity:1;
     transform: translateY(0);
-}
-
-/* Projects Grid */
-.projects-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap:1rem;
-}
-.project-card {
-    background:#f4f4f4;
-    padding:1rem;
-    border-radius:12px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-card:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}
-.project-card iframe {
-    border:1px solid #ddd;
-    border-radius:8px;
 }
 
 /* Skills */
@@ -123,15 +101,33 @@ section {
     color:#000;
     transition: transform 0.3s;
 }
-.skill-circle:hover {
-    transform: scale(1.1);
-    cursor:pointer;
-}
 .skill-circle::before {
     content: attr(data-skill) "\A" attr(data-percent) "%";
     white-space: pre;
     text-align:center;
     font-weight:bold;
+}
+
+/* Projects */
+.projects-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:1rem;
+}
+.project-card {
+    background:#f4f4f4;
+    padding:1rem;
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+.project-card iframe {
+    border:1px solid #ddd;
+    border-radius:8px;
 }
 
 /* Contact Form */
