@@ -12,7 +12,6 @@ document.querySelectorAll('.skill-circle').forEach(circle=>{
             }
         },10);
     });
-    // Reset when mouse leaves
     circle.addEventListener('mouseleave', ()=>{
         circle.style.background = '#ddd';
     });
