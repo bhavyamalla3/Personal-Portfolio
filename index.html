@@ -8,21 +8,11 @@
 </head>
 <body>
 
-<!-- Top Navigation Bar -->
-<nav id="top-nav">
-    <ul>
-        <li><button onclick="showSection('about')">About</button></li>
-        <li><button onclick="showSection('projects')">Projects</button></li>
-        <li><button onclick="showSection('skills')">Skills</button></li>
-        <li><button onclick="showSection('contact')">Contact</button></li>
-    </ul>
-</nav>
-
 <!-- Welcome Screen -->
 <section id="welcome" class="welcome-screen">
     <div class="welcome-content">
         <h1>Welcome ❤️</h1>
-        <p>Hi, I'm Bhavya!:</p>
+        <p>Hi, I'm Bhavya! Choose where you want to go:</p>
         <div class="menu-buttons">
             <button onclick="showSection('about')">About</button>
             <button onclick="showSection('projects')">Projects</button>
@@ -56,64 +46,42 @@
     <div class="projects-grid">
         <div class="project-card">
             <h3>Realtime Chat App</h3>
-            <p>A realtime chat application built with HTML, CSS, JavaScript, and Firebase.</p>
             <iframe src="https://bhavyamalla3.github.io/realtime-chat/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
             <a href="https://bhavyamalla3.github.io/realtime-chat/" target="_blank">Open in Fullscreen</a>
         </div>
 
         <div class="project-card">
             <h3>Personal Portfolio</h3>
-            <p>My personal portfolio website showcasing my projects, skills, and contact information.</p>
             <iframe src="https://bhavyamalla3.github.io/Personal-Portfolio/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
             <a href="https://bhavyamalla3.github.io/Personal-Portfolio/" target="_blank">Open in Fullscreen</a>
         </div>
 
         <div class="project-card">
             <h3>Interactive Quiz</h3>
-            <p>A fun and interactive quiz application built with HTML, CSS, and JavaScript.</p>
             <iframe src="https://bhavyamalla3.github.io/interactive-quiz-application/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
             <a href="https://bhavyamalla3.github.io/interactive-quiz-application/" target="_blank">Open in Fullscreen</a>
         </div>
 
         <div class="project-card">
             <h3>Registration Form</h3>
-            <p>A responsive registration form with validation to collect user details.</p>
             <iframe src="https://mallabhavya21.github.io/techforgirls/" width="100%" height="300px" style="border:1px solid #ddd; border-radius:8px;"></iframe>
             <a href="https://mallabhavya21.github.io/techforgirls/" target="_blank">Open in Fullscreen</a>
-        </div>
-    </div>
-
-    <h3 style="text-align:center; margin-top:2rem;">Future Project Ideas</h3>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>E-commerce Website</h3>
-            <p>A complete online shopping site with product listings, cart, and checkout.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Blogging Platform</h3>
-            <p>A blog site where users can write, edit, and publish their articles.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Weather App with React</h3>
-            <p>A weather forecast app using React and live API integration.</p>
         </div>
     </div>
 
     <button onclick="backToWelcome()">Back</button>
 </section>
 
-<!-- Skills Section (Circular Graphs) -->
+<!-- Skills Section -->
 <section id="skills" class="section">
     <h2>Skills</h2>
     <div class="skills-container">
-        <div class="skill-circle" data-skill="HTML" data-percent="95"></div>
-        <div class="skill-circle" data-skill="CSS" data-percent="90"></div>
-        <div class="skill-circle" data-skill="JavaScript" data-percent="80"></div>
-        <div class="skill-circle" data-skill="Database" data-percent="70"></div>
-        <div class="skill-circle" data-skill="Node.js" data-percent="65"></div>
-        <div class="skill-circle" data-skill="React" data-percent="75"></div>
+        <div class="skill-circle" data-skill="HTML" data-percent="95" style="--color:#e44d26;"></div>
+        <div class="skill-circle" data-skill="CSS" data-percent="90" style="--color:#264de4;"></div>
+        <div class="skill-circle" data-skill="JavaScript" data-percent="80" style="--color:#f7df1e;"></div>
+        <div class="skill-circle" data-skill="Database" data-percent="70" style="--color:#27ae60;"></div>
+        <div class="skill-circle" data-skill="Node.js" data-percent="65" style="--color:#68a063;"></div>
+        <div class="skill-circle" data-skill="React" data-percent="75" style="--color:#61dafb;"></div>
     </div>
     <button onclick="backToWelcome()">Back</button>
 </section>
