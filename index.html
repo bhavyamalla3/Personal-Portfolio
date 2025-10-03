@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<!-- Welcome Menu -->
+<!-- Welcome Screen -->
 <section id="welcome" class="welcome-screen">
     <div class="welcome-content">
         <h1>Welcome</h1>
-        <p>Select where you want to go:</p>
+        <p>Hi, I'm Bhavya! Choose where you want to go:</p>
         <div class="menu-buttons">
             <button onclick="showSection('about')">❤️ About</button>
             <button onclick="showSection('projects')">⚡ Projects</button>
@@ -22,23 +22,30 @@
     </div>
 </section>
 
-<!-- Sections (hidden initially) -->
+<!-- About Section -->
 <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Hello! I'm Bhavya, a B.Tech 3rd-year student passionate about frontend development. I enjoy building interactive and responsive web applications...</p>
+    <p>Hello! I'm Bhavya, a B.Tech 3rd-year student passionate about frontend development. I love building interactive and responsive web applications that provide a great user experience. My goal is to become a professional frontend developer. This portfolio showcases some of the projects I've built so far.</p>
     <button onclick="backToWelcome()">Back</button>
 </section>
 
+<!-- Projects Section -->
 <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project-card">
         <h3>Realtime Chat App</h3>
-        <p>A realtime chat application built with HTML, CSS, JS, Firebase.</p>
+        <p>A realtime chat application built with HTML, CSS, JavaScript, and Firebase.</p>
         <a href="https://bhavyamalla3.github.io/realtime-chat/" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio built with HTML, CSS, and JavaScript.</p>
+        <a href="#" target="_blank">View Project</a>
     </div>
     <button onclick="backToWelcome()">Back</button>
 </section>
 
+<!-- Skills Section -->
 <section id="skills" class="section">
     <h2>Skills</h2>
     <ul>
@@ -50,8 +57,9 @@
     <button onclick="backToWelcome()">Back</button>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="section">
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
     <p>Email: bhavya@example.com</p>
     <p>Phone: +123 456 7890</p>
     <form>
