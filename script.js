@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else{
                 current++;
                 let angle = (current/100)*360;
-                circle.style.background = `conic-gradient(${color} 0deg ${angle}deg,#ddd ${angle}deg 360deg)`;
+                circle.style.background = `conic-gradient(${color} 0deg ${angle}deg, #ddd ${angle}deg 360deg)`;
             }
         },10);
     });
