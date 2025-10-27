@@ -65,7 +65,7 @@ open index.html
 # Or, start a local development server (optional)
 python3 -m http.server 8000
 # Visit http://localhost:8000
-Demo Screenshot
+
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3f019ea1-c10d-4a8b-8b54-25d0e9c84711" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4fca1249-1397-4c7a-98a8-5848a612a142" />
